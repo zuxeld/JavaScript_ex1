@@ -1,3 +1,6 @@
+// необходимая запись для того, чтобы:
+// - при записи необъявлённой переменной возникала ошибка
+"use strict";
 // функции == классы, чтобы создать экземпляр(объект) - исп. New на функции:
 function Animal(name) {
         this.name = name
@@ -6,7 +9,7 @@ function Animal(name) {
 
 // var animal = new Animal("скотинка")
 
-function Rabbit(name: String) {
+function Rabbit(name) {
     this.name = name
     this.animal = new Animal("скотинка")
 }
@@ -18,9 +21,9 @@ function Rabbit(name: String) {
 big = new Rabbit('Chuk')
 small = new Rabbit('Gek')
 
-alert(big.name)  // Chuk
-alert(small.name) // Gek
+console.log(big.name)  // Chuk
+console.log(small.name) // Gek
 
-alert(big.animal.canWalk) // true
-small.animal.canWalk
+console.log(big.animal.canWalk) // true
+// small.animal.canWalk
 
